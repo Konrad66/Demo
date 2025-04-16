@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 public class DemoController {
@@ -22,7 +23,7 @@ public class DemoController {
     }
 
     @GetMapping("/demo")
-    public Collection<DemoEntity> getDemos(){
+    public List<DemoEntity> getDemos(){
         return demoService.getDemos();
     }
 

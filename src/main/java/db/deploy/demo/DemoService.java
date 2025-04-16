@@ -3,6 +3,7 @@ package db.deploy.demo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 @Service
 public class DemoService {
@@ -18,7 +19,7 @@ public class DemoService {
         demoRepository.saveDemo(entity);
     }
 
-    public Collection<DemoEntity> getDemos() {
+    public List<DemoEntity> getDemos() {
         return demoRepository.getDemos();
     }
 }

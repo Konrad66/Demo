@@ -1,10 +1,11 @@
 package db.deploy.demo;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface DemoRepository {
 
     void saveDemo(DemoEntity entity);
 
-    Collection<DemoEntity> getDemos();
+    List<DemoEntity> getDemos();
 }

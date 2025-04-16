@@ -18,7 +18,7 @@ public class DemoCustomRepository implements DemoRepository {
     }
 
     @Override
-    public Collection<DemoEntity> getDemos() {
+    public List<DemoEntity> getDemos() {
         return entities;
     }
 }
