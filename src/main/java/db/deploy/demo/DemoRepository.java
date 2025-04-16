@@ -4,7 +4,7 @@ import java.util.Collection;
 
 public interface DemoRepository {
 
-    void saveDemo(DemoEntity entity);
+    DemoEntity saveDemo(DemoEntity entity);
 
     Collection<DemoEntity> getDemos();
 }

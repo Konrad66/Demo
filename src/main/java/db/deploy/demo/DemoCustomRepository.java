@@ -12,9 +12,10 @@ public class DemoCustomRepository implements DemoRepository {
     private List<DemoEntity> entities = new ArrayList<>();
 
     @Override
-    public void saveDemo(DemoEntity entity) {
+    public DemoEntity saveDemo(DemoEntity entity) {
         entities.add(entity);
         System.out.println(entities);
+        return entity;
     }
 
     @Override

@@ -15,7 +15,8 @@ public class DemoService {
 
     public void sendText(String text) {
         DemoEntity entity = new DemoEntity(text);
-        demoRepository.saveDemo(entity);
+        DemoEntity created = demoRepository.saveDemo(entity);
+        System.out.println(created);
     }
 
     public Collection<DemoEntity> getDemos() {

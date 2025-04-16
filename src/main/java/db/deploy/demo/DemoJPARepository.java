@@ -8,8 +8,8 @@ import java.util.Collection;
 @Primary
 public interface DemoJPARepository extends JpaRepository<DemoEntity, Integer>, DemoRepository {
     @Override
-    default void saveDemo(DemoEntity entity) {
-        save(entity);
+    default DemoEntity saveDemo(DemoEntity entity) {
+        return save(entity);
     }
 
     @Override

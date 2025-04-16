@@ -28,10 +28,19 @@ public class DemoEntity {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
     @Override
     public String toString() {
         return "DemoEntity{" +
-                "text='" + text + '\'' +
+                "id=" + id +
+                ", text='" + text + '\'' +
                 '}';
     }
 }
