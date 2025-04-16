@@ -19,6 +19,7 @@ public class DemoController {
 
     @PostMapping("/demo")
     public void sendDemo(String text){
+        System.out.println(text);
         demoService.sendText(text);
     }
 
