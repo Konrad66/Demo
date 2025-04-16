@@ -25,4 +25,9 @@ public class DemoController {
     public Collection<DemoEntity> getDemos(){
         return demoService.getDemos();
     }
+
+    @GetMapping("/demo2")
+    public DemoEntity getDemo(){
+        return new DemoEntity("hej");
+    }
 }
