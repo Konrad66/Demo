@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface DemoRepository {
 
-    void saveDemo(DemoEntity entity);
+    DemoEntity saveDemo(DemoEntity entity);
 
     List<DemoEntity> getDemos();
 }

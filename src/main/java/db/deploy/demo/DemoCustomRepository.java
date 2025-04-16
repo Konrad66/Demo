@@ -12,15 +12,14 @@ public class DemoCustomRepository implements DemoRepository {
     private List<DemoEntity> entities = new ArrayList<>();
 
     @Override
-    public void saveDemo(DemoEntity entity) {
-        System.out.println("attempting to add: " + entity);
+    public DemoEntity saveDemo(DemoEntity entity) {
         entities.add(entity);
         System.out.println(entities);
+        return entity;
     }
 
     @Override
-    public List<DemoEntity> getDemos() {
-        System.out.println("returning: " + entities);
+    public Collection<DemoEntity> getDemos() {
         return entities;
     }
 }

@@ -3,7 +3,6 @@ package db.deploy.demo;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 
 @Service
 public class DemoService {
@@ -16,12 +15,11 @@ public class DemoService {
 
     public void sendText(String text) {
         DemoEntity entity = new DemoEntity(text);
-        System.out.println(entity);
-        demoRepository.saveDemo(entity);
-        System.out.println("created");
+        DemoEntity created = demoRepository.saveDemo(entity);
+        System.out.println(created);
     }
 
-    public List<DemoEntity> getDemos() {
+    public Collection<DemoEntity> getDemos() {
         return demoRepository.getDemos();
     }
 }
