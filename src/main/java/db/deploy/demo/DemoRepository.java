@@ -7,5 +7,5 @@ public interface DemoRepository {
 
     DemoEntity saveDemo(DemoEntity entity);
 
-    List<DemoEntity> getDemos();
+    Collection<DemoEntity> getDemos();
 }

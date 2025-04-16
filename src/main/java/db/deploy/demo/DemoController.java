@@ -18,15 +18,15 @@ public class DemoController {
         this.demoService = demoService;
     }
 
-    @PostMapping("/demo-a")
+    @PostMapping("/demo")
     public void sendDemo(@RequestParam String text){
         System.out.println(text);
         demoService.sendText(text);
     }
 
-    @GetMapping("/demo-b")
-    public List<DemoEntity> getDemos(){
-        List<DemoEntity> demos = demoService.getDemos();
+    @GetMapping("/demo")
+    public Collection<DemoEntity> getDemos(){
+        Collection<DemoEntity> demos = demoService.getDemos();
         System.out.println(demos);
         return demoService.getDemos();
     }
