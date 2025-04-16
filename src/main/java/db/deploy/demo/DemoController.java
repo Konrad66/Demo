@@ -3,6 +3,7 @@ package db.deploy.demo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -18,7 +19,7 @@ public class DemoController {
     }
 
     @PostMapping("/demo")
-    public void sendDemo(String text){
+    public void sendDemo(@RequestParam String text){
         System.out.println(text);
         demoService.sendText(text);
     }
