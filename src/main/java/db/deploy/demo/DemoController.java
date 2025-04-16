@@ -24,6 +24,8 @@ public class DemoController {
 
     @GetMapping("/demo")
     public List<DemoEntity> getDemos(){
+        List<DemoEntity> demos = demoService.getDemos();
+        System.out.println(demos);
         return demoService.getDemos();
     }
 
