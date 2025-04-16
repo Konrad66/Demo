@@ -8,6 +8,9 @@ public class DemoEntity {
         this.text = text;
     }
 
+    public DemoEntity() {
+    }
+
     public String getText() {
         return text;
     }
